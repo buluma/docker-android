@@ -3,7 +3,7 @@
 ![Docker Stars](https://img.shields.io/docker/stars/buluma/android?style=for-the-badge)
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/buluma/android/latest?style=for-the-badge)
 ![License](https://img.shields.io/github/license/buluma/docker-android?style=for-the-badge)
-[![GitHub release](https://img.shields.io/github/release/buluma/docker-android.svg?style=for-the-badge)](https://github.com/beevelop/docker-android/releases)
+[![GitHub release](https://img.shields.io/github/release/buluma/docker-android.svg?style=for-the-badge)](https://github.com/buluma/docker-android/releases)
 ![GitHub Release Date](https://img.shields.io/github/release-date/buluma/docker-android?style=for-the-badge)
 
 # Android 11.0
