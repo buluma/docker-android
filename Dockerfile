@@ -29,7 +29,7 @@ RUN mkdir /root/.android && touch /root/.android/repositories.cfg && \
 
 USER 9000 
 RUN chmod a+x -R $ANDROID_SDK_ROOT && \
-#     chown -R root:root $ANDROID_SDK_ROOT && \
+    chown -R root:root $ANDROID_SDK_ROOT && \
     rm -rf /opt/android/licenses && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     apt-get autoremove -y && \
