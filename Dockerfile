@@ -1,4 +1,5 @@
-FROM beevelop/java
+# FROM beevelop/java
+FROM ghcr.io/buluma/alpine-java:latest
 
 # https://developer.android.com/studio/#downloads
 ENV ANDROID_SDK_URL="https://dl.google.com/android/repository/commandlinetools-linux-6858069_latest.zip" \
