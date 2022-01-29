@@ -1,5 +1,5 @@
-FROM beevelop/java
-# FROM ghcr.io/buluma/alpine-java:latest
+# FROM beevelop/java
+FROM ghcr.io/buluma/alpine-java:latest
 
 # https://developer.android.com/studio/#downloads
 ENV ANDROID_SDK_URL="https://dl.google.com/android/repository/commandlinetools-linux-6858069_latest.zip" \
@@ -13,12 +13,12 @@ ENV PATH $PATH:$ANDROID_SDK_ROOT/cmdline-tools/bin:$ANDROID_SDK_ROOT/platform-to
 
 WORKDIR /opt
 
-RUN apt-get -qq update && \
-    apt-get -qq install -y wget curl maven ant gradle
+# RUN apt-get -qq update && \
+ #   apt-get -qq install -y wget curl maven ant gradle
     
-# RUN apk update && \
-#    apk upgrade && \
-#    apk add wget curl maven ant gradle
+RUN apk update && \
+    apk upgrade && \
+    apk add wget curl maven apache-ant gradle
 
 # Installs Android SDK
 RUN mkdir android && cd android && \
@@ -36,6 +36,6 @@ RUN chmod a+x -R $ANDROID_SDK_ROOT && \
     chown -R root:root $ANDROID_SDK_ROOT && \
     rm -rf /opt/android/licenses && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
-    apt-get autoremove -y && \
-    apt-get clean && \
+#    apt-get autoremove -y && \
+#    apt-get clean && \
     mvn -v && gradle -v && java -version && ant -version
