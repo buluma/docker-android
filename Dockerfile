@@ -18,7 +18,7 @@ WORKDIR /opt
     
 RUN apk update && \
     apk upgrade && \
-    apk add wget curl maven ant gradle
+    apk add wget curl maven apache-ant gradle
 
 # Installs Android SDK
 RUN mkdir android && cd android && \
