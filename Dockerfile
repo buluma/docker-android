@@ -36,6 +36,6 @@ RUN chmod a+x -R $ANDROID_SDK_ROOT && \
     chown -R root:root $ANDROID_SDK_ROOT && \
     rm -rf /opt/android/licenses && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
-    apt-get autoremove -y && \
-    apt-get clean && \
+#    apt-get autoremove -y && \
+#    apt-get clean && \
     mvn -v && gradle -v && java -version && ant -version
