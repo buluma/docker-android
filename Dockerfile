@@ -13,8 +13,12 @@ ENV PATH $PATH:$ANDROID_SDK_ROOT/cmdline-tools/bin:$ANDROID_SDK_ROOT/platform-to
 
 WORKDIR /opt
 
-RUN apt-get -qq update && \
-    apt-get -qq install -y wget curl maven ant gradle
+# RUN apt-get -qq update && \
+ #   apt-get -qq install -y wget curl maven ant gradle
+    
+RUN apk update && \
+    apk upgrade && \
+    apk add wget curl maven ant gradle
 
 # Installs Android SDK
 RUN mkdir android && cd android && \
